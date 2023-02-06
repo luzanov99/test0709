@@ -1,7 +1,8 @@
+from ast import While
 from collections import Counter
 #1
 def simple_text(phrase :str):
-    words_dict = {}
+    
     phrase = phrase.lower()
     words_list = phrase.split(' ')
     count = Counter(words_list)
@@ -26,6 +27,7 @@ def sort_grades(value_list : list):
         elif element == 'A':
             a_list.append('A')
     result = f_list + d_list + c_list + b_list + a_list
+    #result = sorted(value_list, reverse=True)
     return result
 #3
 def is_anagram(word1:str, word2:str):
@@ -55,7 +57,7 @@ def roman_to_int(word:str):
             result -= combination[word[i]]
         else:
             result += combination[word[i]]
-            
+                  
     return str(result)   
 
 if __name__ == '__main__':
@@ -75,7 +77,3 @@ if __name__ == '__main__':
     print(roman_to_int('XXI'))
     print(roman_to_int('IV'))
     print(roman_to_int('I'))
-    #print(sort_array([5, 3, 2, 8, 1, 4]))
-    #print(is_anagram('abc','acb'))
-    #print(roman_to_int('IV'))
-    
